@@ -7,4 +7,4 @@ before_install:
   - chmod +x ./build.sh
 script:
   - ./build.sh --quiet verify
-  - mono ./packages/xunit.runners.*/tools/xunit.console.clr4.exe /home/travis/build/gonzalompp/dotnetcore-travisci/src/Calculator.Tests/bin/Debug/netcoreapp2.0/Calculator.Tests.dll
+  - cd src/Calculator.Tests/ && dotnet test
